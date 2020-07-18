@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="js-signup-form" class="form">
+            <h3 class="form__heading">Register</h3>
+            <div class="nav-group">
+                <a id="js-signup-email" class="nav active" data-select-section="email">Email</a>
+                <a id="js-signup-phone" class="nav" data-select-section="phone">Phone</a>
+            </div>
+            <section id="email-content" data-section="email">
+                <p class="form__description">Register your email and currency</p>
+                <form class="form__email">
+                    <fieldset class="form__fieldset">
+                        <label class="form__element">
+                            <input value="" class="form__input" type="text" name="email" placeholder="Email">
+                        </label>
+                        <label class="form__element">
+                            <select name="currency" class="form__currency">
+                                <option value="" selected disabled>Currency</option>
+                                <option value="USD">United States Dollars</option>
+                                <option value="EUR">Euro</option>
+                                <option value="GBP">United Kingdom Pounds</option>
+                                <option value="DZD">Algeria Dinars</option>
+                                <option value="ARP">Argentina Pesos</option>
+                                <option value="AUD">Australia Dollars</option>
+                                <option value="ATS">Austria Schillings</option>
+                            </select>
+                        </label>
+                        <label class="form__label form__element">
+                            <input name="promoCheckbox" class="form__checkbox" type="checkbox">Subscribe to stay updated
+                            with new products and offers!
+                        </label>
+                        <label class="form__label form__element">
+                            <input name="termsCheckbox" class="form__checkbox" type="checkbox">I agree to the Terms and
+                            Conditions.
+                        </label>
+                        <button name="submit" class="form__button form__element" type="button">Submit</button>
+                    </fieldset>
+                </form>
+            </section>
+            <section id="phone-content" class="phone-content" data-section="phone">
+                <p class="form__description">What is your phone number?</p>
+                <form class="form__email">
+                    <fieldset class="form__fieldset">
+                        <label class="form__element" for="phone">
+                            <input class="form__input" value="" type="text" name="phone" placeholder="Phone">
+                        </label>
+                        <label class="form__element">
+                            <select name="currency" class="form__currency">
+                                <option value="" disabled selected>Currency</option>
+                                <option value="USD">United States Dollars</option>
+                                <option value="EUR">Euro</option>
+                                <option value="GBP">United Kingdom Pounds</option>
+                                <option value="DZD">Algeria Dinars</option>
+                                <option value="ARP">Argentina Pesos</option>
+                                <option value="AUD">Australia Dollars</option>
+                                <option value="ATS">Austria Schillings</option>
+                            </select>
+                        </label>
+                        <label class="form__label form__element">
+                            <input name="promoCheckbox" class="form__checkbox" type="checkbox">Subscribe to stay updated
+                            with new products and offers!
+                        </label>
+                        <label class="form__label form__element">
+                            <input name="termsCheckbox" class="form__checkbox" type="checkbox">I agree to the Terms and
+                            Conditions
+                        </label>
+                        <button name="submit" class="form__button form__element" type="button">Submit</button>
+                    </fieldset>
+                </form>
+            </section>
+            <div class="spinner">
+                <div class="spinner-icon"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/joi-browser.min.js"></script>
+    <script src="./js/utils.js"></script>
+</body>
+
+</html>

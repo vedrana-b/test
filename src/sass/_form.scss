@@ -1,0 +1,123 @@
+.form {
+    border-radius: 1rem;
+    background-color: rgb(255, 255, 255);
+    height: max-content;
+    margin-top: 3rem;
+    padding: 1rem;
+    width: 400px;
+    &__fieldset {
+        border: none;
+        display: flex;
+        flex-direction: column;
+        &--opacity {
+            opacity: 60%;
+        }
+    }
+    &__input {
+        background: rgb(244, 244, 244);
+        box-sizing: border-box;
+        border: 1px solid rgba(34, 36, 38, 0.03);
+        border-radius: 4px;
+        font-size: .9rem;
+        line-height: 1rem;
+        padding: 0.5rem 0rem 0.5rem 1.2rem;
+        width: 100%;
+        &::placeholder {
+            color: rgb(128, 128, 128);
+            font-size: 14px;
+        }
+    }
+    &__checkbox {
+        height: 17px;
+        margin-right: .500rem;
+        width: 17px;
+    }
+    &__label {
+        align-items: center;
+        display: flex;
+        font-size: 12px;
+        line-height: 14px;
+    }
+    &__element {
+        margin: 1rem 0;
+    }
+    &__currency {
+        background: rgb(244, 244, 244);
+        border: 1px solid rgba(34, 36, 38, 0.03);
+        border-radius: 4px;
+        color: rgb(128, 128, 128);
+        font-size: 14px;
+        line-height: 1rem;
+        padding: .500rem 1rem;
+        width: 100%;
+    }
+    &__button {
+        @include position(relative);
+        background: #60b02d;
+        border: none;
+        box-shadow: 0 0 0 1px transparent inset, 0 0 0 0 rgba(34, 36, 38, 0.15) inset;
+        color: white;
+        border-radius: 25px;
+        font-size: 1rem;
+        height: 40px;
+        text-transform: uppercase;
+        transition: background-color 0.4s ease, box-shadow 0.1s ease;
+        width: 100%;
+        &:hover {
+            background: darken($color: rgb(96, 176, 45), $amount: 3%);
+        }
+        &:focus {
+            background: lighten($color: rgb(96, 176, 45), $amount: 5%);
+        }
+    }
+    &__heading {
+        border-top-right-radius: 4px;
+        border-top-left-radius: 4px;
+        color: rgb(12, 99, 108);
+        padding: 2rem;
+        text-align: center;
+    }
+    &__description {
+        color: rgb(94, 94, 94);
+        font-weight: bold;
+        letter-spacing: .1px;
+        padding: 2rem 0 1rem;
+        text-align: center;
+    }
+}
+
+.phone-content {
+    display: none;
+}
+
+.signup-message {
+    &--success {
+        @include message($background: rgb(252, 255, 245), $color:rgb(44, 102, 45), $boxshadow: 0 0 0 1px rgb(163, 194, 147) inset);
+        h6 {
+            font-weight: 700;
+            line-height: 22px;
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+    &--error {
+        @include message($background: rgb(255, 246, 246), $color: rgb(159, 58, 56), $boxshadow: 0 0 0 1px rgb(224, 180, 180) inset);
+        h6 {
+            font-weight: bold;
+            line-height: 22px;
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+}
+
+.error {
+    background: rgb(255, 246, 246);
+    border: 1px solid rgb(224, 180, 180);
+    border-radius: 4px;
+    color: rgb(159, 58, 56);
+    font-size: 12px;
+    padding: .500rem;
+}

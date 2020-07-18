@@ -1,0 +1,21 @@
+@mixin message($background, $color, $boxshadow) {
+    background-color: $background;
+    color: $color;
+    box-shadow: $boxshadow;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+}
+
+// Position mixin
+@mixin position($type: static, $top: null, $right: null, $bottom: null, $left: null) {
+    @if ($type== "static" or $type== "absolute" or $type== "relative" or $type== "fixed" or $type== "sticky") {
+        position: $type;
+        top: $top;
+        right: $right;
+        bottom: $bottom;
+        left: $left;
+    } @else {
+        position: static;
+        @warn "The type `#{$type} isn't valid position attribute. It is set to default value.`";
+    }
+}

@@ -1,0 +1,36 @@
+.nav-group {
+    align-items: center;
+    background-color: rgb(244, 244, 244);
+    display: flex;
+    height: 40px;
+}
+
+.nav {
+    align-items: center;
+    color: rgb(210, 206, 206);
+    cursor: pointer;
+    display: flex;
+    font-weight: bold;
+    height: 100%;
+    padding-left: 3rem;
+    text-decoration: none;
+    width: 50%;
+}
+
+.nav.active {
+    @include position(relative);
+    color: #5e5e5e;
+    font-weight: bold;
+    &::after {
+        @include position(absolute, $top: 24px, $left: 30%);
+        content: " ";
+        border: solid transparent;
+        border-width: 8px;
+        border-color: rgba(136, 183, 213, 0);
+        border-bottom-color: rgb(255, 255, 255);
+        margin-left: -10px;
+        height: 0;
+        pointer-events: none;
+        width: 0;
+      }
+}
